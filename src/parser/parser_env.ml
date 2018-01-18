@@ -224,7 +224,7 @@ let init_env ?(token_sink=None) ?(parse_options=None) source content =
     | Some opts -> opts
     | None -> default_parse_options
   in
-  let enable_types_in_comments = parse_options.types in
+  let enable_types_in_comments = false in
   let lex_env = Lex_env.new_lex_env source lb ~enable_types_in_comments in
   {
     errors = ref errors;
